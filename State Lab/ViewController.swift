@@ -39,6 +39,9 @@ class ViewController: UIViewController {
         let center = NSNotificationCenter.defaultCenter()
         center.addObserver(self, selector: "applicationWillResignActive", name: UIApplicationWillResignActiveNotification, object: nil)
         center.addObserver(self, selector: "applicationDidBecomeActive", name: UIApplicationDidBecomeActiveNotification, object: nil)
+
+        center.addObserver(self, selector: "applicationDidEnterBackground", name: UIApplicationDidEnterBackgroundNotification, object: nil)
+        center.addObserver(self, selector: "applicationWillEnterForeground", name: UIApplicationWillEnterForegroundNotification, object: nil)
     }
     
     func applicationWillResignActive() {
@@ -50,6 +53,19 @@ class ViewController: UIViewController {
         print("VC:\(__FUNCTION__)")
         animate = true
         rotateLabelDown()
+    }
+    
+    func applicationDidEnterBackground() {
+        print("VC:\(__FUNCTION__)")
+        self.smiley = nil
+        self.smileyView.image = nil
+    }
+    
+    func applicationWillEnterForeground() {
+        print("VC:\(__FUNCTION__)")
+        let smileyPath = NSBundle.mainBundle().pathForResource("smiley", ofType: "png")!
+        smiley = UIImage(contentsOfFile: smileyPath)
+        smileyView.image = smiley
     }
     
     func rotateLabelDown() {
