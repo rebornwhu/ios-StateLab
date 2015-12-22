@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89C362DB1C2916C900EB32D6 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 89C362DA1C2916C900EB32D6 /* smiley.png */; };
 		89D3A0F81C1CBD19003033C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D3A0F71C1CBD19003033C7 /* AppDelegate.swift */; };
 		89D3A0FA1C1CBD19003033C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D3A0F91C1CBD19003033C7 /* ViewController.swift */; };
 		89D3A0FD1C1CBD19003033C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D3A0FB1C1CBD19003033C7 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		89C362DA1C2916C900EB32D6 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
 		89D3A0F41C1CBD19003033C7 /* State Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "State Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D3A0F71C1CBD19003033C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89D3A0F91C1CBD19003033C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		89D3A0F61C1CBD19003033C7 /* State Lab */ = {
 			isa = PBXGroup;
 			children = (
+				89C362DA1C2916C900EB32D6 /* smiley.png */,
 				89D3A0F71C1CBD19003033C7 /* AppDelegate.swift */,
 				89D3A0F91C1CBD19003033C7 /* ViewController.swift */,
 				89D3A0FB1C1CBD19003033C7 /* Main.storyboard */,
@@ -235,6 +238,7 @@
 				89D3A1261C1CBD3C003033C7 /* .gitignore in Resources */,
 				89D3A1021C1CBD19003033C7 /* LaunchScreen.storyboard in Resources */,
 				89D3A0FF1C1CBD19003033C7 /* Assets.xcassets in Resources */,
+				89C362DB1C2916C900EB32D6 /* smiley.png in Resources */,
 				89D3A0FD1C1CBD19003033C7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				89D3A11E1C1CBD19003033C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D3A11F1C1CBD19003033C7 /* Build configuration list for PBXNativeTarget "State LabTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				89D3A1211C1CBD19003033C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D3A1221C1CBD19003033C7 /* Build configuration list for PBXNativeTarget "State LabUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				89D3A1241C1CBD19003033C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
