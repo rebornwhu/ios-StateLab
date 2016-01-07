@@ -72,9 +72,31 @@ class ViewController: UIViewController {
     
     func applicationDidEnterBackground() {
         print("VC:\(__FUNCTION__)")
-        self.smiley = nil
-        self.smileyView.image = nil
         NSUserDefaults.standardUserDefaults().setInteger(self.index, forKey: "index")
+        
+        let app = UIApplication.sharedApplication()
+        var taskId: UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
+        let id = app.beginBackgroundTaskWithExpirationHandler() {
+            print("Background task ran out of time and was terminated.")
+            app.endBackgroundTask(taskId)
+        }
+        taskId = id
+        
+        if taskId == UIBackgroundTaskInvalid {
+            print("Failed to start background task!")
+            return
+        }
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            print("Starting background task with " + "\(app.backgroundTimeRemaining)")
+            self.smiley = nil
+            self.smileyView.image = nil
+            
+            NSThread.sleepForTimeInterval(25)
+            
+            print("Finishing background task with " + "\(app.backgroundTimeRemaining)")
+            app.endBackgroundTask(taskId)
+        })
     }
     
     func applicationWillEnterForeground() {
